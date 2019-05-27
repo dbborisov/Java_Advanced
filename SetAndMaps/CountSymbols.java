@@ -2,10 +2,7 @@ package SetAndMaps;
 
 
 
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class CountSymbols {
@@ -30,3 +27,23 @@ public class CountSymbols {
         });
     }
 }
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        try {
+//            String[] input = scanner.nextLine().split("");
+//            Map<Character, Integer> dataCount = new TreeMap<>();
+//            for (int i = 0; i < input.length; i++) {
+//                if (!dataCount.containsKey(input[i].charAt(0))) {
+//                    dataCount.put(input[i].charAt(0), 1);
+//                } else {
+//                    dataCount.put(input[i].charAt(0), dataCount.get(input[i].charAt(0)) + 1);
+//                }
+//            }
+//            dataCount.forEach((key, value) -> {
+//                System.out.println(String.format("%c: %d time/s", key, value));
+//            });
+//        } catch (Exception ignored) {
+//
+//        }
+//    }
+
