@@ -71,9 +71,31 @@ public class HelenaAbduction2 {
 
                 }
             }else if(command.equals("left")){
+                if(isInBound(matrix,parisRow,parisCol-1)){
+                    if(matrix[parisRow][parisCol-1].equals("S")){
+                        energy-=2;
+                    }
+                    if(matrix[parisRow][parisCol-1].equals("H")){
+                        isAbducted=true;
+                    }
+                    matrix[parisRow][parisCol]="-";
+                    parisCol--;
+                    matrix[parisRow][parisCol] = "P";
 
+                }
             }else if(command.equals("right")){
+                if(isInBound(matrix,parisRow,parisCol+1)){
+                    if(matrix[parisRow][parisCol+1].equals("S")){
+                        energy-=2;
+                    }
+                    if(matrix[parisRow][parisCol+1].equals("H")){
+                        isAbducted=true;
+                    }
+                    matrix[parisRow][parisCol]="-";
+                    parisCol++;
+                    matrix[parisRow][parisCol] = "P";
 
+                }
             }
 
 
@@ -89,9 +111,6 @@ public class HelenaAbduction2 {
             System.out.printf("Paris died at %d;%d.%n",parisRow,parisCol);
         }
         printMatrix(matrix);
-
-
-
 
 
     }
