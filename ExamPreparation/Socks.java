@@ -34,9 +34,7 @@ public class Socks {
 
         }
 
-
-
-        System.out.println(toprint.stream().mapToInt(Integer::byteValue).max().getAsInt());
+        System.out.println(toprint.stream().max(Integer::compareTo).get());
         toprint.forEach(e-> System.out.print(e+" "));
 
     }
